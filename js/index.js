@@ -22,7 +22,7 @@ const todayDateDayName = document.getElementById("todayDateDayName");
 const searchInput = document.getElementById("search");
 
 
-async function getWeatherData(cityName) {
+async function getWeatherData(cityName='cairo') {
   let res = await fetch(
     `https://api.weatherapi.com/v1/forecast.json?key=d7cb905c812440e4800124547250707&q=${cityName}&days=7`
   );
@@ -71,11 +71,23 @@ async function getThirdData(data) {
 }
 
 async function startApp(city='cairo') { 
+  if (!city || city.trim() === "") {
+    city = "cairo";     
+  }
   let weatherData = await getWeatherData(city);
   if(!weatherData.error){
+     document.getElementById('day-2').classList.remove('d-none')
+    document.getElementById('day-3').classList.remove('d-none')
   displayTodayData(weatherData);
   getNextData(weatherData);
   getThirdData(weatherData);
+  }else {
+    document.getElementById("todayLocation").innerHTML = "City not found 🚫";
+    document.getElementById("todayTemp").innerHTML = "--";
+    document.getElementById("todayConditionText").innerHTML =
+      "Please enter a valid city name.";
+    document.getElementById('day-2').classList.add('d-none')
+    document.getElementById('day-3').classList.add('d-none')
   }
 
  
