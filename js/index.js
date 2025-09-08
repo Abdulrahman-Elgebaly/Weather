@@ -24,7 +24,7 @@ const searchInput = document.getElementById("search");
 
 async function getWeatherData(cityName) {
   let res = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=d7cb905c812440e4800124547250707&q=${cityName}&days=7`
+    `https://api.weatherapi.com/v1/forecast.json?key=d7cb905c812440e4800124547250707&q=${cityName}&days=7`
   );
   let weatherData = await res.json();
 
