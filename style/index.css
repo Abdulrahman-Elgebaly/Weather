@@ -1,0 +1,51 @@
+body {
+  padding-top: 7.7rem;
+  background-color: #1e202b;
+  background-image: url(../image/banner.png);
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+.item a:hover {
+  border: 2px solid rgb(13, 202, 240);
+  border-top-left-radius: 50rem;
+  border-top-right-radius: 50rem;
+  border-bottom-right-radius: 50rem;
+  border-bottom-left-radius: 50rem;
+  transition: all 1s ease;
+  color: rgb(13, 202, 240) !important;
+}
+input::placeholder {
+  color: rgb(184, 178, 178) !important;
+}
+.main-color {
+  background-color: #1e202b !important;
+}
+.card {
+  color: #bfc1c8;
+  border: none !important;
+}
+.card-head {
+  background-color: #1e202b;
+}
+.main-temp {
+  font-size: 80px;
+  font-weight: bolder;
+  color: white;
+}
+.card-body {
+  background-color: #323544;
+}
+.card a {
+  text-decoration: none;
+}
+.icon {
+  margin: 50px 0px 50px 0px;
+}
+.center-card {
+  background-color: #262936;
+}
+.footer {
+  background-color: #262936;
+  height: 40vh;
+}
+

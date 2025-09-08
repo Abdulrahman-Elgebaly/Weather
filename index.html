@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/all.min.css" />
+    <link rel="stylesheet" href="style/media.css" />
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg fixed-top bg-black bg-opacity-75 navbar-dark p-4 main-color"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="image/logo.png" class="w-25 mx-2" alt=""> Weather</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 py-3">
+            <li class="nav-item">
+              <a
+                class="nav-link active border-2 border border-info rounded-pill text-info"
+                aria-current="page"
+                href="#"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item item">
+              <a class="nav-link active" aria-current="page" href="#">News</a>
+            </li>
+            <li class="nav-item item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Live cameras</a
+              >
+            </li>
+            <li class="nav-item item">
+              <a class="nav-link active" aria-current="page" href="#">Photos</a>
+            </li>
+            <li class="nav-item item">
+              <a class="nav-link active" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <input
+        id="search"
+        type="search"
+        class="form-control w-75 mx-auto m-5 p-3 rounded-pill main-color text-white"
+        placeholder="Find Your Location..."
+      />
+
+      <div class="forecast row">
+        <div class="col-md-4 g-0">
+          <div class="card">
+            <div
+              id="today-day"
+              class="card-head d-flex justify-content-between align-items-center"
+            >
+              <p id="todayDateDayName" class="ms-2 my-2">friday</p>
+              <span>
+                <span id="todayDateDayNumber" class="my-2">11</span>
+                <span id="todayDateMonth" class="me-2 my-2">jul</span>
+              </span>
+            </div>
+            <div class="card-body">
+              <h3 id="todayLocation">Alexandria</h3>
+              <h1 id="todayTemp" class="main-temp">28.2oC</h1>
+              <img
+                id="todayConditionImg"
+                src="image/113.png"
+                width="90"
+                lt=""
+              />
+              <div class="my-3">
+                <a id="todayConditionText" href="">Partly cloudy</a>
+              </div>
+              <div class="card-foot d-flex justify-content-between w-75">
+                <span>
+                  <img src="image/icon-umberella.png" alt="" />
+                  <p id="humidity">20%</p>
+                </span>
+                <span>
+                  <img src="image/icon-wind.png" class="ms-3" alt="" />
+                  <p id="wind">18km/h</p>
+                </span>
+                <span>
+                  <img src="image/icon-compass.png" alt="" />
+                  <p id="windDirection" class="ms-1">East</p></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 g-0">
+          <div class="card h-100 text-center">
+            <div class="card-head">
+              <p class="my-2" id="nextDayDate">saturday</p>
+            </div>
+            <div class="card-body center-card">
+              <img
+                id="nextDayImg"
+                class="icon"
+                src="image/113.png"
+                width="50"
+                lt=""
+              />
+              <h5 id="nextDayMaxTemp">39.4° C</h5>
+              <p id="nextDayMinTemp">24.7°</p>
+              <div class="my-3">
+                <a id="nextDayConditionText" href="#">Sunny</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 g-0">
+          <div class="card h-100 text-center">
+            <div class="card-head">
+              <p class="my-2" id="thirdDayDate">sunday</p>
+            </div>
+            <div class="card-body">
+              <img
+                class="icon"
+                id="thirdDayImg"
+                src="image/113.png"
+                width="50"
+                lt=""
+              />
+
+              <h5 id="thirdDayMaxTemp">39.4oC</h5>
+              <p id="thirdDayMinTemp">24.7o</p>
+              <div class="my-3">
+                <a id="thirdDayConditionText" href="">Sunny</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer mt-5 d-flex align-items-center">
+      <div class="container">
+        <input
+          type="search"
+          class="align-self-center form-control w-75 p-3 rounded-pill main-color text-white"
+          placeholder="Enter your email to subscribe..."
+        />
+        <p class="text-white mt-4">
+          Copyright © 2025 Weather App. Designed by Abdelrahman Adel. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
